@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d27bf539f9d58a1ee5375f8945ac1abd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d27bf539f9d58a1ee5375f8945ac1abd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d27bf539f9d58a1ee5375f8945ac1abd = L.map(
+                "map_d27bf539f9d58a1ee5375f8945ac1abd",
+                {
+                    center: [30.7688, 76.5754],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    markerZoom: 17,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f3a0b45e9748cc1886b078b822ea6f24 = L.tileLayer(
+                "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_f3a0b45e9748cc1886b078b822ea6f24.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            var tile_layer_baa5b1198151d58c363b384347994644 = L.tileLayer(
+                "https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors, Tiles courtesy of \u003ca href=\"http://www.openstreetmap.bzh/\" target=\"_blank\"\u003eBreton OpenStreetMap Team\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_baa5b1198151d58c363b384347994644.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            var tile_layer_0cfdb9b072240edbd932c3025faa8e01 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; OpenStreetMap France | \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_0cfdb9b072240edbd932c3025faa8e01.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            var feature_group_b645dd25f358368e9bc7a523e3e4b333 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_6beb9a5c131698ec0e280a424df9bfca = L.marker(
+                [30.768744947318915, 76.5776381704867],
+                {}
+            ).addTo(feature_group_b645dd25f358368e9bc7a523e3e4b333);
+        
+    
+        var custom_icon_9b4a04bf83f5988b95b109421d2e93dd = L.icon({"iconSize": [25, 25], "iconUrl": "https://pics.freeicons.io/uploads/icons/png/10274305501591055829-512.png"});
+        marker_6beb9a5c131698ec0e280a424df9bfca.setIcon(custom_icon_9b4a04bf83f5988b95b109421d2e93dd);
+        
+    
+        var popup_894bd4bb792f28f20bd25a9a1db95e96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25a8cecbd87e60f78c115947a939f3ef = $(`<div id="html_25a8cecbd87e60f78c115947a939f3ef" style="width: 100.0%; height: 100.0%;">Creative Foods</div>`)[0];
+                popup_894bd4bb792f28f20bd25a9a1db95e96.setContent(html_25a8cecbd87e60f78c115947a939f3ef);
+            
+        
+
+        marker_6beb9a5c131698ec0e280a424df9bfca.bindPopup(popup_894bd4bb792f28f20bd25a9a1db95e96)
+        ;
+
+        
+    
+    
+            feature_group_b645dd25f358368e9bc7a523e3e4b333.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            var feature_group_d7a9dc7e6104cb9977e5088ef7b1e48e = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_a2551a6b7c9fc1fb71b1b8aa60bff842 = L.marker(
+                [30.76714843670572, 76.57472148622176],
+                {}
+            ).addTo(feature_group_d7a9dc7e6104cb9977e5088ef7b1e48e);
+        
+    
+        var custom_icon_55bc10c553ad802e2dea50d226b905db = L.icon({"iconSize": [25, 25], "iconUrl": "https://pics.freeicons.io/uploads/icons/png/7141564811595156044-512.png"});
+        marker_a2551a6b7c9fc1fb71b1b8aa60bff842.setIcon(custom_icon_55bc10c553ad802e2dea50d226b905db);
+        
+    
+        var popup_337195a10b6b5385eb4e089604ffe418 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a26e422d43a68c997a7224766ea4a0a8 = $(`<div id="html_a26e422d43a68c997a7224766ea4a0a8" style="width: 100.0%; height: 100.0%;">C1</div>`)[0];
+                popup_337195a10b6b5385eb4e089604ffe418.setContent(html_a26e422d43a68c997a7224766ea4a0a8);
+            
+        
+
+        marker_a2551a6b7c9fc1fb71b1b8aa60bff842.bindPopup(popup_337195a10b6b5385eb4e089604ffe418)
+        ;
+
+        
+    
+    
+            feature_group_d7a9dc7e6104cb9977e5088ef7b1e48e.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            var layer_control_d178720f34226001669383037e6d6c46_layers = {
+                base_layers : {
+                    "openstreetmapde" : tile_layer_f3a0b45e9748cc1886b078b822ea6f24,
+                    "openstreetmapbzh" : tile_layer_baa5b1198151d58c363b384347994644,
+                    "openstreetmapfrance" : tile_layer_0cfdb9b072240edbd932c3025faa8e01,
+                },
+                overlays :  {
+                    "Food_courts" : feature_group_b645dd25f358368e9bc7a523e3e4b333,
+                    "Blocks" : feature_group_d7a9dc7e6104cb9977e5088ef7b1e48e,
+                },
+            };
+            let layer_control_d178720f34226001669383037e6d6c46 = L.control.layers(
+                layer_control_d178720f34226001669383037e6d6c46_layers.base_layers,
+                layer_control_d178720f34226001669383037e6d6c46_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+
+        
+    
+            tile_layer_f3a0b45e9748cc1886b078b822ea6f24.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            tile_layer_baa5b1198151d58c363b384347994644.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            tile_layer_0cfdb9b072240edbd932c3025faa8e01.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            feature_group_b645dd25f358368e9bc7a523e3e4b333.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+    
+            feature_group_d7a9dc7e6104cb9977e5088ef7b1e48e.addTo(map_d27bf539f9d58a1ee5375f8945ac1abd);
+        
+</script>
+</html>
