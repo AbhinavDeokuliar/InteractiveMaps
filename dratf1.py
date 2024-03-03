@@ -67,3 +67,4 @@ folium.LayerControl(collapsed=True).add_to(map_cu)
 map_cu.save("draft1.html")
 auto_open("draft1.html", map_cu)
 #just a add on
+#another add on
