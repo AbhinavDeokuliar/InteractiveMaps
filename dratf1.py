@@ -1,7 +1,7 @@
-import folium
-from folium.plugins import GroupedLayerControl
-from folium.features import CustomIcon
 import webbrowser
+
+import folium
+from folium.features import CustomIcon
 from jinja2 import Template
 
 
@@ -12,10 +12,10 @@ def auto_open(path, f_map):
     new = 2
     webbrowser.open(html_page, new=new)
 
+
 popup_template = Template("""
 
 """)
-
 
 latitude = 30.7688
 longitude = 76.5754
@@ -66,5 +66,6 @@ folium.Marker([30.768744947318915, 76.5776381704867], popup="Creative Foods", ic
 folium.LayerControl(collapsed=True).add_to(map_cu)
 map_cu.save("draft1.html")
 auto_open("draft1.html", map_cu)
-#just a add on
-#another add on
+# just an add-on
+# another add on
+# one more add-on
