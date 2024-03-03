@@ -66,3 +66,4 @@ folium.Marker([30.768744947318915, 76.5776381704867], popup="Creative Foods", ic
 folium.LayerControl(collapsed=True).add_to(map_cu)
 map_cu.save("draft1.html")
 auto_open("draft1.html", map_cu)
+#just a add on
