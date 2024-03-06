@@ -1,6 +1,7 @@
 import webbrowser
 import folium
 from folium.features import CustomIcon
+import pandas as pd
 
 
 def auto_open(path, f_map):
@@ -10,6 +11,14 @@ def auto_open(path, f_map):
     new = 2
     webbrowser.open(html_page, new=new)
 
+
+"""Read the Excel file into a pandas DataFrame """
+df = pd.read_excel('Book1.xlsx')
+
+# Extract the latitude, longitude, and point of interest columns
+latitudes = df['latitude'].tolist()
+longitudes = df['longitude'].tolist()
+points_of_interest = df['point_of_interest'].tolist()
 
 """Starting point of the map"""
 
@@ -32,8 +41,8 @@ tile_layer4 = folium.TileLayer(tiles="OpenStreetMap.BZH",
 
 """List of point of interests"""
 
-block = [[30.76714843670572, 76.57472148622176], [30.766843747902985, 76.57621805141478]]  # [ c3, c1]
-food = [[30.768744947318915, 76.5776381704867], [30.768756919536795, 76.5777927058071]]  # [creative food, crunchy bite]
+# Create a dictionary of tuples
+coordinates = {point: (lat, lon) for point, lat, lon in zip(points_of_interest, latitudes, longitudes)}
 
 """Icon Urls & its implementation """
 
@@ -64,8 +73,10 @@ L.control.layers(base_layers, null, {collapsed:True}).addTo(map);
 
 folium.JavascriptLink(js_code).add_to(map_cu)
 
-folium.Marker([30.76714843670572, 76.57472148622176], popup="C1", icon=book_icon).add_to(blocks)
-folium.Marker([30.768744947318915, 76.5776381704867], popup="Creative Foods", icon=food_icon).add_to(food_courts)
+"""adding marker in thr map"""
+
+for point, (lat, lon) in coordinates.items():
+    folium.Marker(location=[lat, lon], popup=point).add_to(map_cu)
 
 folium.LayerControl(collapsed=True).add_to(map_cu)
 
