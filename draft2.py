@@ -12,13 +12,21 @@ def auto_open(path, f_map):
     webbrowser.open(html_page, new=new)
 
 
-"""Read the Excel file into a pandas DataFrame """
-df = pd.read_excel('Book1.xlsx')
+df = pd.read_excel('blocks.xlsx')
 
 # Extract the latitude, longitude, and point of interest columns
-latitudes = df['latitude'].tolist()
-longitudes = df['longitude'].tolist()
-points_of_interest = df['point_of_interest'].tolist()
+b_latitudes = df['latitude'].tolist()
+b_longitudes = df['longitude'].tolist()
+b_points_of_interest = df['point_of_interest'].tolist()
+
+
+"""Read the Excel file into a pandas DataFrame """
+df1 = pd.read_excel('food.xlsx')
+
+# Extract the latitude, longitude, and point of interest columns
+f_latitudes = df1['latitude'].tolist()
+f_longitudes = df1['longitude'].tolist()
+f_points_of_interest = df1['point_of_interest'].tolist()
 
 """Starting point of the map"""
 
@@ -42,15 +50,16 @@ tile_layer4 = folium.TileLayer(tiles="OpenStreetMap.BZH",
 """List of point of interests"""
 
 # Create a dictionary of tuples
-coordinates = {point: (lat, lon) for point, lat, lon in zip(points_of_interest, latitudes, longitudes)}
+b_coordinates = {point: (lat, lon) for point, lat, lon in zip(b_points_of_interest, b_latitudes, b_longitudes)}
+f_coordinates = {point: (lat, lon) for point, lat, lon in zip(f_points_of_interest, f_latitudes, f_longitudes)}
 
 """Icon Urls & its implementation """
 
-food_icon_url = "https://pics.freeicons.io/uploads/icons/png/10274305501591055829-512.png"
-book_icon_url = "https://pics.freeicons.io/uploads/icons/png/7141564811595156044-512.png"
+food_icon_path = "fast-food_737967.png"
+book_icon_path = "book_3145765.png"
 
-food_icon = CustomIcon(food_icon_url, icon_size=(25, 25))
-book_icon = CustomIcon(book_icon_url, icon_size=(25, 25))
+food_icon = CustomIcon(food_icon_path, icon_size=(25, 25))
+book_icon = CustomIcon(book_icon_path, icon_size=(25, 25))
 
 """Map initialization"""
 
@@ -75,8 +84,11 @@ folium.JavascriptLink(js_code).add_to(map_cu)
 
 """adding marker in thr map"""
 
-for point, (lat, lon) in coordinates.items():
-    folium.Marker(location=[lat, lon], popup=point).add_to(map_cu)
+for point, (lat, lon) in b_coordinates.items():
+    folium.Marker(location=[lat, lon], popup=point).add_to(blocks)
+
+for point, (lat, lon) in f_coordinates.items():
+    folium.Marker(location=[lat, lon], popup=point).add_to(food_courts)
 
 folium.LayerControl(collapsed=True).add_to(map_cu)
 

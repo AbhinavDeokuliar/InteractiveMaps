@@ -12,11 +12,6 @@ def auto_open(path, f_map):
     new = 2
     webbrowser.open(html_page, new=new)
 
-
-popup_template = Template("""
-
-""")
-
 latitude = 30.7688
 longitude = 76.5754
 
