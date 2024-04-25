@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7ebf37fd9dfac4b633a0db3acf92da94 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7ebf37fd9dfac4b633a0db3acf92da94" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7ebf37fd9dfac4b633a0db3acf92da94 = L.map(
+                "map_7ebf37fd9dfac4b633a0db3acf92da94",
+                {
+                    center: [40.748817, -73.985428],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3d35553a4063cf5f43ee58fe7aa38f88 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_3d35553a4063cf5f43ee58fe7aa38f88.addTo(map_7ebf37fd9dfac4b633a0db3acf92da94);
+        
+    
+            var marker_2471fab12562f5eb0369fadf26ff5515 = L.marker(
+                [40.748817, -73.985428],
+                {}
+            ).addTo(feature_group_f4bcab085591b5af4ab75a447731d64e);
+        
+    
+        var popup_abfc78bf0bb33dafbacf974aa787c485 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f8169314094eca234c465c822087a0e8 = $(`<div id="html_f8169314094eca234c465c822087a0e8" style="width: 100.0%; height: 100.0%;">Empire State Building</div>`)[0];
+                popup_abfc78bf0bb33dafbacf974aa787c485.setContent(html_f8169314094eca234c465c822087a0e8);
+            
+        
+
+        marker_2471fab12562f5eb0369fadf26ff5515.bindPopup(popup_abfc78bf0bb33dafbacf974aa787c485)
+        ;
+
+        
+    
+    
+            var feature_group_f4bcab085591b5af4ab75a447731d64e = L.featureGroup(
+                {}
+            );
+        
+    
+            feature_group_f4bcab085591b5af4ab75a447731d64e.addTo(map_7ebf37fd9dfac4b633a0db3acf92da94);
+        
+    
+            var feature_group_f4bcab085591b5af4ab75a447731d64esearchControl = new L.Control.Search({
+                layer: feature_group_f4bcab085591b5af4ab75a447731d64e,
+                
+                propertyName: 'Marker',
+                
+                collapsed: false,
+                textPlaceholder: 'Search',
+                position:'topleft',
+            
+                initial: false,
+                
+                hideMarkerOnCollapse: true
+            
+                });
+                feature_group_f4bcab085591b5af4ab75a447731d64esearchControl.on('search:locationfound', function(e) {
+                    feature_group_f4bcab085591b5af4ab75a447731d64e.setStyle(function(feature){
+                        return feature.properties.style
+                    })
+                    
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+                })
+                feature_group_f4bcab085591b5af4ab75a447731d64esearchControl.on('search:collapsed', function(e) {
+                        feature_group_f4bcab085591b5af4ab75a447731d64e.setStyle(function(feature){
+                            return feature.properties.style
+                    });
+                });
+            map_7ebf37fd9dfac4b633a0db3acf92da94.addControl( feature_group_f4bcab085591b5af4ab75a447731d64esearchControl );
+
+        
+</script>
+</html>
