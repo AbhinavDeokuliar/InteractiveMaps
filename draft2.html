@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_24040dbf86e0a7b4f7a40a8d08735df6 {
+                #map_f6b20c1b9ce248d6693bc108bf378a7a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,25 +35,27 @@
                 .leaflet-container { font-size: 1rem; }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_24040dbf86e0a7b4f7a40a8d08735df6" ></div>
+            <div class="folium-map" id="map_f6b20c1b9ce248d6693bc108bf378a7a" ></div>
         
 </body>
 <script>
     
     
-            var map_24040dbf86e0a7b4f7a40a8d08735df6 = L.map(
-                "map_24040dbf86e0a7b4f7a40a8d08735df6",
+            var map_f6b20c1b9ce248d6693bc108bf378a7a = L.map(
+                "map_f6b20c1b9ce248d6693bc108bf378a7a",
                 {
                     center: [30.7688, 76.5754],
                     crs: L.CRS.EPSG3857,
                     zoom: 17,
-                    zoomControl: false,
+                    zoomControl: true,
                     preferCanvas: false,
-                    scrollWheelZoom: false,
                     markerZoom: 17,
                 }
             );
@@ -62,832 +64,595 @@
 
         
     
-            var tile_layer_448762a156d8eb5aac83a09244794c4d = L.tileLayer(
-                "https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors, Tiles courtesy of \u003ca href=\"http://www.openstreetmap.bzh/\" target=\"_blank\"\u003eBreton OpenStreetMap Team\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            var tile_layer_433cf5096312314b7307ee6cb2318dc4 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; OpenStreetMap France | \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_448762a156d8eb5aac83a09244794c4d.addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            tile_layer_433cf5096312314b7307ee6cb2318dc4.addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
         
     
-            var feature_group_3f71109d2786c607969e47a50aae84a1 = L.featureGroup(
+            var feature_group_78f73d5ec3f611b283ab454528c830d5 = L.featureGroup(
                 {}
             );
         
     
-            var marker_7d1fe9a879c87f64487d639afd1736ff = L.marker(
+            var marker_cluster_f92982c675ae9f84ed9967f66aec2b96 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_3208dc0f1fd1ee1c1116b3ee8f7ed15f = L.marker(
                 [30.76686315, 76.57603369],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_19d44e2e907685fe1a9f3c1f95b9213b = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_29a91aa0c25642e213ef69429222e063 = $(`<div id="html_29a91aa0c25642e213ef69429222e063" style="width: 100.0%; height: 100.0%;">FOOD REPUBLIC</div>`)[0];
-                popup_19d44e2e907685fe1a9f3c1f95b9213b.setContent(html_29a91aa0c25642e213ef69429222e063);
-            
-        
-
-        marker_7d1fe9a879c87f64487d639afd1736ff.bindPopup(popup_19d44e2e907685fe1a9f3c1f95b9213b)
-        ;
-
+            marker_3208dc0f1fd1ee1c1116b3ee8f7ed15f.bindTooltip(
+                `<div>
+                     FOOD REPUBLIC
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_09db7728c453686d47fb1c1a944fcd22 = L.marker(
+            var marker_62acb388ef42bf8cb65a63e8f6e8e8a0 = L.marker(
                 [30.76879649, 76.57764958],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_8823f3a0599cac590b5d0c351c8654cd = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_223a8a8d221d6dd7c0963b2c970aad1b = $(`<div id="html_223a8a8d221d6dd7c0963b2c970aad1b" style="width: 100.0%; height: 100.0%;">Creative foods</div>`)[0];
-                popup_8823f3a0599cac590b5d0c351c8654cd.setContent(html_223a8a8d221d6dd7c0963b2c970aad1b);
-            
-        
-
-        marker_09db7728c453686d47fb1c1a944fcd22.bindPopup(popup_8823f3a0599cac590b5d0c351c8654cd)
-        ;
-
+            marker_62acb388ef42bf8cb65a63e8f6e8e8a0.bindTooltip(
+                `<div>
+                     Creative foods
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_b08c62673399a151b3e72e52dd575b14 = L.marker(
+            var marker_a885d0d673e61109e79cdca2a75b23cb = L.marker(
                 [30.76872044, 76.5779131],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_136a9b12e7ce68c9c137cecb27e96e73 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_c6af8f9f3edb18877afdec00037fa4ab = $(`<div id="html_c6af8f9f3edb18877afdec00037fa4ab" style="width: 100.0%; height: 100.0%;">La Pino'z Pizza</div>`)[0];
-                popup_136a9b12e7ce68c9c137cecb27e96e73.setContent(html_c6af8f9f3edb18877afdec00037fa4ab);
-            
-        
-
-        marker_b08c62673399a151b3e72e52dd575b14.bindPopup(popup_136a9b12e7ce68c9c137cecb27e96e73)
-        ;
-
+            marker_a885d0d673e61109e79cdca2a75b23cb.bindTooltip(
+                `<div>
+                     La Pino'z Pizza
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_300891926eb3b63bc59ed9c7558c697f = L.marker(
+            var marker_a76076f4f77ce670a31d87b0009c9abf = L.marker(
                 [30.76879591, 76.57778704],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_8b7cc987dfcb68f88633e0195f2c0503 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_5488004d2e286a61daa0f39fecbafae8 = $(`<div id="html_5488004d2e286a61daa0f39fecbafae8" style="width: 100.0%; height: 100.0%;">Crunchy Bite</div>`)[0];
-                popup_8b7cc987dfcb68f88633e0195f2c0503.setContent(html_5488004d2e286a61daa0f39fecbafae8);
-            
-        
-
-        marker_300891926eb3b63bc59ed9c7558c697f.bindPopup(popup_8b7cc987dfcb68f88633e0195f2c0503)
-        ;
-
+            marker_a76076f4f77ce670a31d87b0009c9abf.bindTooltip(
+                `<div>
+                     Crunchy Bite
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_9b492fa703e764aa09a618c882638b0f = L.marker(
+            var marker_4e434719534dfa2887f48a8171a343b6 = L.marker(
                 [30.76935072, 76.57825384],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_1f5875e9782c14a3d63df43698117dff = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_9823ace421eeb16b5c1fe0434a9160a5 = $(`<div id="html_9823ace421eeb16b5c1fe0434a9160a5" style="width: 100.0%; height: 100.0%;">Maggi hotspot</div>`)[0];
-                popup_1f5875e9782c14a3d63df43698117dff.setContent(html_9823ace421eeb16b5c1fe0434a9160a5);
-            
-        
-
-        marker_9b492fa703e764aa09a618c882638b0f.bindPopup(popup_1f5875e9782c14a3d63df43698117dff)
-        ;
-
+            marker_4e434719534dfa2887f48a8171a343b6.bindTooltip(
+                `<div>
+                     Maggi hotspot
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_e16d5e173dce3d63275a1e569ae772f0 = L.marker(
+            var marker_25c02e5bf445c5280a7197f4fe75a8da = L.marker(
                 [30.76900691, 76.578537],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_06f4a1b2a75c3b560f89c7f33fc758e9 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_53ded3c960f66f7a763b51c5156fefbf = $(`<div id="html_53ded3c960f66f7a763b51c5156fefbf" style="width: 100.0%; height: 100.0%;">Burgrill</div>`)[0];
-                popup_06f4a1b2a75c3b560f89c7f33fc758e9.setContent(html_53ded3c960f66f7a763b51c5156fefbf);
-            
-        
-
-        marker_e16d5e173dce3d63275a1e569ae772f0.bindPopup(popup_06f4a1b2a75c3b560f89c7f33fc758e9)
-        ;
-
+            marker_25c02e5bf445c5280a7197f4fe75a8da.bindTooltip(
+                `<div>
+                     Burgrill
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_3daaa87d4a08cf162c7693a9848fb9a8 = L.marker(
+            var marker_d164c826c9b93a284c87deb0fddd6623 = L.marker(
                 [30.76930536, 76.57854917],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_3432ca18db094ec7abb4993497661a17 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_38da5cb3622110c55b4109411f57b546 = $(`<div id="html_38da5cb3622110c55b4109411f57b546" style="width: 100.0%; height: 100.0%;">Books And Cooks</div>`)[0];
-                popup_3432ca18db094ec7abb4993497661a17.setContent(html_38da5cb3622110c55b4109411f57b546);
-            
-        
-
-        marker_3daaa87d4a08cf162c7693a9848fb9a8.bindPopup(popup_3432ca18db094ec7abb4993497661a17)
-        ;
-
+            marker_d164c826c9b93a284c87deb0fddd6623.bindTooltip(
+                `<div>
+                     Books And Cooks
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_4658af28c1ce2e9302a1228d89414986 = L.marker(
+            var marker_65d8aaf08cc27b18dbfa5d59de893466 = L.marker(
                 [30.76759649, 76.57625026],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_92d6c32697dc2c457f8412136d8ab618 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_169138c138f057317f065050dbf16647 = $(`<div id="html_169138c138f057317f065050dbf16647" style="width: 100.0%; height: 100.0%;">Samosa Express</div>`)[0];
-                popup_92d6c32697dc2c457f8412136d8ab618.setContent(html_169138c138f057317f065050dbf16647);
-            
-        
-
-        marker_4658af28c1ce2e9302a1228d89414986.bindPopup(popup_92d6c32697dc2c457f8412136d8ab618)
-        ;
-
+            marker_65d8aaf08cc27b18dbfa5d59de893466.bindTooltip(
+                `<div>
+                     Samosa Express
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_4607f6df93414a716fe3c7a6da6b3bf6 = L.marker(
+            var marker_00a4869748f9727ad57d7fe89f2c1701 = L.marker(
                 [30.76832016, 76.5753316],
                 {}
-            ).addTo(feature_group_3f71109d2786c607969e47a50aae84a1);
+            ).addTo(marker_cluster_f92982c675ae9f84ed9967f66aec2b96);
         
     
-        var popup_c298f4af31739cb1f89f0eb6aa644df2 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_41804f36add0441f61491ba20cc44473 = $(`<div id="html_41804f36add0441f61491ba20cc44473" style="width: 100.0%; height: 100.0%;">JUICE BAR</div>`)[0];
-                popup_c298f4af31739cb1f89f0eb6aa644df2.setContent(html_41804f36add0441f61491ba20cc44473);
-            
-        
-
-        marker_4607f6df93414a716fe3c7a6da6b3bf6.bindPopup(popup_c298f4af31739cb1f89f0eb6aa644df2)
-        ;
-
+            marker_00a4869748f9727ad57d7fe89f2c1701.bindTooltip(
+                `<div>
+                     JUICE BAR
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            feature_group_3f71109d2786c607969e47a50aae84a1.addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            marker_cluster_f92982c675ae9f84ed9967f66aec2b96.addTo(feature_group_78f73d5ec3f611b283ab454528c830d5);
         
     
-            var feature_group_547497d75f5a47af936390f8332e7248 = L.featureGroup(
+            feature_group_78f73d5ec3f611b283ab454528c830d5.addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
+        
+    
+            var feature_group_5ba94592a3f992a463722407e25ea968 = L.featureGroup(
                 {}
             );
         
     
-            var marker_2a2e5981454c080db7b5cbb7bd245da4 = L.marker(
+            var marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_9d5b013a03fefa5b5426fd747431edf1 = L.marker(
                 [30.77018264, 76.57586904],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_d1fb2bfc4547ed0c911102d81cce6ecf = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_c15d041ee6ec974ced2862671bb1dfc2 = $(`<div id="html_c15d041ee6ec974ced2862671bb1dfc2" style="width: 100.0%; height: 100.0%;">Central library</div>`)[0];
-                popup_d1fb2bfc4547ed0c911102d81cce6ecf.setContent(html_c15d041ee6ec974ced2862671bb1dfc2);
-            
-        
-
-        marker_2a2e5981454c080db7b5cbb7bd245da4.bindPopup(popup_d1fb2bfc4547ed0c911102d81cce6ecf)
-        ;
-
+            marker_9d5b013a03fefa5b5426fd747431edf1.bindTooltip(
+                `<div>
+                     Central library
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_f51a79e7c3153bdd88e4f5d6e22524ab = L.marker(
+            var marker_24a3c2dce7d25cacd92ceced4f5b890b = L.marker(
                 [30.76960829, 76.57551547],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_3ae1dcb74aaf740a842c8f184a31e38e = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_f396240dbe4d8176e7863e5100afdd78 = $(`<div id="html_f396240dbe4d8176e7863e5100afdd78" style="width: 100.0%; height: 100.0%;">Academic Block B1</div>`)[0];
-                popup_3ae1dcb74aaf740a842c8f184a31e38e.setContent(html_f396240dbe4d8176e7863e5100afdd78);
-            
-        
-
-        marker_f51a79e7c3153bdd88e4f5d6e22524ab.bindPopup(popup_3ae1dcb74aaf740a842c8f184a31e38e)
-        ;
-
+            marker_24a3c2dce7d25cacd92ceced4f5b890b.bindTooltip(
+                `<div>
+                     Academic Block B1
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_1fbf9da1c349b98e4d430bb7f8bb1a5a = L.marker(
+            var marker_2b88a14dc004fe4b9fb546b396494dcf = L.marker(
                 [30.76962833, 76.57604918],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_49f5d7f4516070c4bf268764b47de093 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_f4f9a690329bbc961db7466b97486a8f = $(`<div id="html_f4f9a690329bbc961db7466b97486a8f" style="width: 100.0%; height: 100.0%;">Block B1 Park</div>`)[0];
-                popup_49f5d7f4516070c4bf268764b47de093.setContent(html_f4f9a690329bbc961db7466b97486a8f);
-            
-        
-
-        marker_1fbf9da1c349b98e4d430bb7f8bb1a5a.bindPopup(popup_49f5d7f4516070c4bf268764b47de093)
-        ;
-
+            marker_2b88a14dc004fe4b9fb546b396494dcf.bindTooltip(
+                `<div>
+                     Block B1 Park
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_4fe1e94c5d77a77b17fee50f9f86b52f = L.marker(
+            var marker_2d6207a9cd2df03740abeb48b94fca1c = L.marker(
                 [30.7689258, 76.57679597],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_567ee6d5bc0572c42dc98330d342ce1f = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_04e310bad9ab3cd0d3e4582199f662e1 = $(`<div id="html_04e310bad9ab3cd0d3e4582199f662e1" style="width: 100.0%; height: 100.0%;">Eternal Garden - CU</div>`)[0];
-                popup_567ee6d5bc0572c42dc98330d342ce1f.setContent(html_04e310bad9ab3cd0d3e4582199f662e1);
-            
-        
-
-        marker_4fe1e94c5d77a77b17fee50f9f86b52f.bindPopup(popup_567ee6d5bc0572c42dc98330d342ce1f)
-        ;
-
+            marker_2d6207a9cd2df03740abeb48b94fca1c.bindTooltip(
+                `<div>
+                     Eternal Garden - CU
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_a705c19cea905a50b4ecd56896fc6dac = L.marker(
+            var marker_c3e8d6708244bbd8a2befcd574e23693 = L.marker(
                 [30.76947045, 76.57741241],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_03646436999b28c657025444f2242374 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_6e84d53e0e94b079eb33e4fa7de5de09 = $(`<div id="html_6e84d53e0e94b079eb33e4fa7de5de09" style="width: 100.0%; height: 100.0%;">CU Fountain Point</div>`)[0];
-                popup_03646436999b28c657025444f2242374.setContent(html_6e84d53e0e94b079eb33e4fa7de5de09);
-            
-        
-
-        marker_a705c19cea905a50b4ecd56896fc6dac.bindPopup(popup_03646436999b28c657025444f2242374)
-        ;
-
+            marker_c3e8d6708244bbd8a2befcd574e23693.bindTooltip(
+                `<div>
+                     CU Fountain Point
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_b3f86fbb35e92c4d426a3732c15b538b = L.marker(
+            var marker_c6d49a3f3039ad81d99d9046eb5bc198 = L.marker(
                 [30.76946181, 76.57754921],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_ddb2a04f4b3c71db9d1309ee240cf8ca = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_19d1dd904e20559e0dbcf3da8d2b26f8 = $(`<div id="html_19d1dd904e20559e0dbcf3da8d2b26f8" style="width: 100.0%; height: 100.0%;">Open Air Theater - CU</div>`)[0];
-                popup_ddb2a04f4b3c71db9d1309ee240cf8ca.setContent(html_19d1dd904e20559e0dbcf3da8d2b26f8);
-            
-        
-
-        marker_b3f86fbb35e92c4d426a3732c15b538b.bindPopup(popup_ddb2a04f4b3c71db9d1309ee240cf8ca)
-        ;
-
+            marker_c6d49a3f3039ad81d99d9046eb5bc198.bindTooltip(
+                `<div>
+                     Open Air Theater - CU
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_8bd6dc9ab3ba37ae782aa4edd23cad28 = L.marker(
+            var marker_c03f96e3996087a7793d0799e41318c4 = L.marker(
                 [30.76959616, 76.57787721],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_847a53cc589f112677536301d4985615 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_ac49e0891e8c482949058b113b06c35d = $(`<div id="html_ac49e0891e8c482949058b113b06c35d" style="width: 100.0%; height: 100.0%;">Fountain park Chandigarh University</div>`)[0];
-                popup_847a53cc589f112677536301d4985615.setContent(html_ac49e0891e8c482949058b113b06c35d);
-            
-        
-
-        marker_8bd6dc9ab3ba37ae782aa4edd23cad28.bindPopup(popup_847a53cc589f112677536301d4985615)
-        ;
-
+            marker_c03f96e3996087a7793d0799e41318c4.bindTooltip(
+                `<div>
+                     Fountain park Chandigarh University
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_ebf9617767ffe1968733c7fe2e398a8a = L.marker(
+            var marker_fd6577271dc32743e51c747e1c570d05 = L.marker(
                 [30.76904148, 76.57842905],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_5166f8ca5398ac12acce1ff598ede807 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_6f7cf06ab546ca13bcd5fa66638c5599 = $(`<div id="html_6f7cf06ab546ca13bcd5fa66638c5599" style="width: 100.0%; height: 100.0%;">(Block-7 CU) A3</div>`)[0];
-                popup_5166f8ca5398ac12acce1ff598ede807.setContent(html_6f7cf06ab546ca13bcd5fa66638c5599);
-            
-        
-
-        marker_ebf9617767ffe1968733c7fe2e398a8a.bindPopup(popup_5166f8ca5398ac12acce1ff598ede807)
-        ;
-
+            marker_fd6577271dc32743e51c747e1c570d05.bindTooltip(
+                `<div>
+                     (Block-7 CU) A3
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_4b5d45a83a014ef91b79bc9169b67a3a = L.marker(
+            var marker_518d8182fe11def063c488ffd42f75ec = L.marker(
                 [30.76920069, 76.57924668],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_d4f26204fb9eb4917d45e1e81dd3b359 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_5d993d659cfa81d6c5237c766a60ca6f = $(`<div id="html_5d993d659cfa81d6c5237c766a60ca6f" style="width: 100.0%; height: 100.0%;">Denial sculpture studio</div>`)[0];
-                popup_d4f26204fb9eb4917d45e1e81dd3b359.setContent(html_5d993d659cfa81d6c5237c766a60ca6f);
-            
-        
-
-        marker_4b5d45a83a014ef91b79bc9169b67a3a.bindPopup(popup_d4f26204fb9eb4917d45e1e81dd3b359)
-        ;
-
+            marker_518d8182fe11def063c488ffd42f75ec.bindTooltip(
+                `<div>
+                     Denial sculpture studio
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_924bce0fbe54e0498515464e4e718713 = L.marker(
+            var marker_a640e7d45d9a59af70fa3abe2cc1b075 = L.marker(
                 [30.76967301, 76.57932185],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_2332af0967cb7fff1d8402c497786453 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_5651c65e6b4e0f1cd2f5bc7aae9010d0 = $(`<div id="html_5651c65e6b4e0f1cd2f5bc7aae9010d0" style="width: 100.0%; height: 100.0%;">Block - A2</div>`)[0];
-                popup_2332af0967cb7fff1d8402c497786453.setContent(html_5651c65e6b4e0f1cd2f5bc7aae9010d0);
-            
-        
-
-        marker_924bce0fbe54e0498515464e4e718713.bindPopup(popup_2332af0967cb7fff1d8402c497786453)
-        ;
-
+            marker_a640e7d45d9a59af70fa3abe2cc1b075.bindTooltip(
+                `<div>
+                     Block - A2
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_63d59d700651d3d28998c8c3e31d1ebf = L.marker(
+            var marker_fae9c863a551ac5ed9a9d65d473fc536 = L.marker(
                 [30.76984795, 76.57923475],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_d3c1d26770c381d179daca11ea002f25 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_bb6a06ec4a818633e841aae47957ce4f = $(`<div id="html_bb6a06ec4a818633e841aae47957ce4f" style="width: 100.0%; height: 100.0%;">Radio Punjab 90.0</div>`)[0];
-                popup_d3c1d26770c381d179daca11ea002f25.setContent(html_bb6a06ec4a818633e841aae47957ce4f);
-            
-        
-
-        marker_63d59d700651d3d28998c8c3e31d1ebf.bindPopup(popup_d3c1d26770c381d179daca11ea002f25)
-        ;
-
+            marker_fae9c863a551ac5ed9a9d65d473fc536.bindTooltip(
+                `<div>
+                     Radio Punjab 90.0
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_361c42095489e74db67c1fcaf0f4a2b1 = L.marker(
+            var marker_4481d30ed3bde0849d22a5a208d06f6f = L.marker(
                 [30.76980877, 76.57942921],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_f7e3b2b2245eecf9cd442d76b0e2296a = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_f8d08eef1427909a66df0b32ad7f826d = $(`<div id="html_f8d08eef1427909a66df0b32ad7f826d" style="width: 100.0%; height: 100.0%;">University Institute of Architecture</div>`)[0];
-                popup_f7e3b2b2245eecf9cd442d76b0e2296a.setContent(html_f8d08eef1427909a66df0b32ad7f826d);
-            
-        
-
-        marker_361c42095489e74db67c1fcaf0f4a2b1.bindPopup(popup_f7e3b2b2245eecf9cd442d76b0e2296a)
-        ;
-
+            marker_4481d30ed3bde0849d22a5a208d06f6f.bindTooltip(
+                `<div>
+                     University Institute of Architecture
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_9495f112895466690f52466b9f4ca617 = L.marker(
+            var marker_b6e3ec3552b1153a6dd51c1fd5f9f0ff = L.marker(
                 [30.76946941, 76.57921732],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_62aab3c4f22a4ff00d63c8650b3d339e = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_7af00106d2fde4e7dd84dab33ed72c20 = $(`<div id="html_7af00106d2fde4e7dd84dab33ed72c20" style="width: 100.0%; height: 100.0%;">University Institute of Media Studies</div>`)[0];
-                popup_62aab3c4f22a4ff00d63c8650b3d339e.setContent(html_7af00106d2fde4e7dd84dab33ed72c20);
-            
-        
-
-        marker_9495f112895466690f52466b9f4ca617.bindPopup(popup_62aab3c4f22a4ff00d63c8650b3d339e)
-        ;
-
+            marker_b6e3ec3552b1153a6dd51c1fd5f9f0ff.bindTooltip(
+                `<div>
+                     University Institute of Media Studies
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_b0d83c204182a57767d92d305702073a = L.marker(
+            var marker_483464445e131f931c8100f38217cc9c = L.marker(
                 [30.77046394, 76.57795508],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_a69a1d68cf7b7a8f15bb99bdc7a26b45 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_c7994a1bbfdc75b8d26b8f92a16ec485 = $(`<div id="html_c7994a1bbfdc75b8d26b8f92a16ec485" style="width: 100.0%; height: 100.0%;">Sukhna Girl's Hostel 1</div>`)[0];
-                popup_a69a1d68cf7b7a8f15bb99bdc7a26b45.setContent(html_c7994a1bbfdc75b8d26b8f92a16ec485);
-            
-        
-
-        marker_b0d83c204182a57767d92d305702073a.bindPopup(popup_a69a1d68cf7b7a8f15bb99bdc7a26b45)
-        ;
-
+            marker_483464445e131f931c8100f38217cc9c.bindTooltip(
+                `<div>
+                     Sukhna Girl's Hostel 1
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_71453c0acfa022567f1bb24853312815 = L.marker(
+            var marker_be93092b216afdc90febc6b8564cbbdd = L.marker(
                 [30.77161317, 76.57825112],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_2212d829982a857845c7918042fbd997 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_3df186d28d29c6fb363510314d0f2bc4 = $(`<div id="html_3df186d28d29c6fb363510314d0f2bc4" style="width: 100.0%; height: 100.0%;">Block A1 , Chandigarh University</div>`)[0];
-                popup_2212d829982a857845c7918042fbd997.setContent(html_3df186d28d29c6fb363510314d0f2bc4);
-            
-        
-
-        marker_71453c0acfa022567f1bb24853312815.bindPopup(popup_2212d829982a857845c7918042fbd997)
-        ;
-
+            marker_be93092b216afdc90febc6b8564cbbdd.bindTooltip(
+                `<div>
+                     Block A1 , Chandigarh University
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_44d76b7af1d7d3e591ee109b0cbcfda2 = L.marker(
+            var marker_9bc80c20c6175f26d2dbce6f8cb251ca = L.marker(
                 [30.77116692, 76.57888425],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_06fbcf5d25e7eb8d2cbeae74dbd3be6c = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_44cc1c5bc739d7b46756ba83aa45b6ff = $(`<div id="html_44cc1c5bc739d7b46756ba83aa45b6ff" style="width: 100.0%; height: 100.0%;">Block-A1 Parking (For Employees)</div>`)[0];
-                popup_06fbcf5d25e7eb8d2cbeae74dbd3be6c.setContent(html_44cc1c5bc739d7b46756ba83aa45b6ff);
-            
-        
-
-        marker_44d76b7af1d7d3e591ee109b0cbcfda2.bindPopup(popup_06fbcf5d25e7eb8d2cbeae74dbd3be6c)
-        ;
-
+            marker_9bc80c20c6175f26d2dbce6f8cb251ca.bindTooltip(
+                `<div>
+                     Block-A1 Parking (For Employees)
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_22fca04a5359a88aa6101588874ef510 = L.marker(
+            var marker_7eeeacb6287e557c5e7748f9f3b4acda = L.marker(
                 [30.7691676, 76.57586955],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_f9bf0c9809485e2a58c6d5a2b4e18208 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_682a67ed90a322ccfac2674b1a7845a6 = $(`<div id="html_682a67ed90a322ccfac2674b1a7845a6" style="width: 100.0%; height: 100.0%;">B2</div>`)[0];
-                popup_f9bf0c9809485e2a58c6d5a2b4e18208.setContent(html_682a67ed90a322ccfac2674b1a7845a6);
-            
-        
-
-        marker_22fca04a5359a88aa6101588874ef510.bindPopup(popup_f9bf0c9809485e2a58c6d5a2b4e18208)
-        ;
-
+            marker_7eeeacb6287e557c5e7748f9f3b4acda.bindTooltip(
+                `<div>
+                     B2
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_c17d00bbff5f0179888bfcd26b658372 = L.marker(
+            var marker_58d88a027874cb444e9c93930e4ef120 = L.marker(
                 [30.76869975, 76.57555976],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_d2059743f9018b4240d8f1372cba1093 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_d650ca69388ff05a905f1b3f476ece4c = $(`<div id="html_d650ca69388ff05a905f1b3f476ece4c" style="width: 100.0%; height: 100.0%;">Department of Student Welfare</div>`)[0];
-                popup_d2059743f9018b4240d8f1372cba1093.setContent(html_d650ca69388ff05a905f1b3f476ece4c);
-            
-        
-
-        marker_c17d00bbff5f0179888bfcd26b658372.bindPopup(popup_d2059743f9018b4240d8f1372cba1093)
-        ;
-
+            marker_58d88a027874cb444e9c93930e4ef120.bindTooltip(
+                `<div>
+                     Department of Student Welfare
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_8f4eba6cca315fec87ed107b82ffabc5 = L.marker(
+            var marker_02b9aa6d083765fee9b7f92e4838d590 = L.marker(
                 [30.76879046, 76.57636359],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_91b10cbfc38509737c66b594c9e6d79f = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_af680f955b423ba656e064218c69f816 = $(`<div id="html_af680f955b423ba656e064218c69f816" style="width: 100.0%; height: 100.0%;">Department of Forensic science</div>`)[0];
-                popup_91b10cbfc38509737c66b594c9e6d79f.setContent(html_af680f955b423ba656e064218c69f816);
-            
-        
-
-        marker_8f4eba6cca315fec87ed107b82ffabc5.bindPopup(popup_91b10cbfc38509737c66b594c9e6d79f)
-        ;
-
+            marker_02b9aa6d083765fee9b7f92e4838d590.bindTooltip(
+                `<div>
+                     Department of Forensic science
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_f0b6b37e797725a818fa1358c77f0b5c = L.marker(
+            var marker_2984cd375729a60dfd715ee74eeac78a = L.marker(
                 [30.76892705, 76.5746038],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_8dfeea413649408ce721c8efb816c926 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_eea1730ff8cff4d34e410e1621fcf364 = $(`<div id="html_eea1730ff8cff4d34e410e1621fcf364" style="width: 100.0%; height: 100.0%;">Academic Block-B4</div>`)[0];
-                popup_8dfeea413649408ce721c8efb816c926.setContent(html_eea1730ff8cff4d34e410e1621fcf364);
-            
-        
-
-        marker_f0b6b37e797725a818fa1358c77f0b5c.bindPopup(popup_8dfeea413649408ce721c8efb816c926)
-        ;
-
+            marker_2984cd375729a60dfd715ee74eeac78a.bindTooltip(
+                `<div>
+                     Academic Block-B4
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_b171d7d65ca253aad23f11bd8ee56c5a = L.marker(
+            var marker_06c0d9aaaa0d4aafcb34f0c1f279fa9d = L.marker(
                 [30.76879139, 76.57395948],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_6329babc8606d607ffedacef89bdc23d = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_1f87f401eaef25bb152655829040d618 = $(`<div id="html_1f87f401eaef25bb152655829040d618" style="width: 100.0%; height: 100.0%;">Kalpana Chawla Space & Research Centre</div>`)[0];
-                popup_6329babc8606d607ffedacef89bdc23d.setContent(html_1f87f401eaef25bb152655829040d618);
-            
-        
-
-        marker_b171d7d65ca253aad23f11bd8ee56c5a.bindPopup(popup_6329babc8606d607ffedacef89bdc23d)
-        ;
-
+            marker_06c0d9aaaa0d4aafcb34f0c1f279fa9d.bindTooltip(
+                `<div>
+                     Kalpana Chawla Space & Research Centre
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_d6f5e909bb1db38ee201b612903d3201 = L.marker(
+            var marker_3ee12ed1d4a859dbd12b4de48c49e772 = L.marker(
                 [30.76928905, 76.57383769],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_58119a31e9e315912c820f7afbf579db = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_3c992d30a368f65b89ea863056e5d4ae = $(`<div id="html_3c992d30a368f65b89ea863056e5d4ae" style="width: 100.0%; height: 100.0%;">Workshop of Aerospace Engineering Departmen</div>`)[0];
-                popup_58119a31e9e315912c820f7afbf579db.setContent(html_3c992d30a368f65b89ea863056e5d4ae);
-            
-        
-
-        marker_d6f5e909bb1db38ee201b612903d3201.bindPopup(popup_58119a31e9e315912c820f7afbf579db)
-        ;
-
+            marker_3ee12ed1d4a859dbd12b4de48c49e772.bindTooltip(
+                `<div>
+                     Workshop of Aerospace Engineering Departmen
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_388fd2c1ccbe1fdd41b9628ac35b124a = L.marker(
+            var marker_f55527894aa036457cc152dd74ac046b = L.marker(
                 [30.76948296, 76.57668277],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_b92515b6c2708045f32a812162f327ce = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_6d799b9598625b47828d94896a8396dd = $(`<div id="html_6d799b9598625b47828d94896a8396dd" style="width: 100.0%; height: 100.0%;">Open Hand Monument Replica</div>`)[0];
-                popup_b92515b6c2708045f32a812162f327ce.setContent(html_6d799b9598625b47828d94896a8396dd);
-            
-        
-
-        marker_388fd2c1ccbe1fdd41b9628ac35b124a.bindPopup(popup_b92515b6c2708045f32a812162f327ce)
-        ;
-
+            marker_f55527894aa036457cc152dd74ac046b.bindTooltip(
+                `<div>
+                     Open Hand Monument Replica
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_ec371e5dacbe186a5e7a3de2e7bc35dc = L.marker(
+            var marker_280488424b7735b5a03bdc3166fabb03 = L.marker(
                 [30.76943226, 76.57679676],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_889a46f05c52494cb9a429af87ac5ef5 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_483b9417ed92b130e9a76ca762576a1a = $(`<div id="html_483b9417ed92b130e9a76ca762576a1a" style="width: 100.0%; height: 100.0%;">cu bird 🐦 park</div>`)[0];
-                popup_889a46f05c52494cb9a429af87ac5ef5.setContent(html_483b9417ed92b130e9a76ca762576a1a);
-            
-        
-
-        marker_ec371e5dacbe186a5e7a3de2e7bc35dc.bindPopup(popup_889a46f05c52494cb9a429af87ac5ef5)
-        ;
-
+            marker_280488424b7735b5a03bdc3166fabb03.bindTooltip(
+                `<div>
+                     cu bird 🐦 park
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_53a5e10da611c5321bbdde27622214a7 = L.marker(
+            var marker_a3fb2c09782413d9fd10948e460f5dde = L.marker(
                 [30.77111584, 76.5763154],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_44b078ac186e1731c0943c72001a53ae = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_cf25cb19b84c63bd1aef50561bc486b0 = $(`<div id="html_cf25cb19b84c63bd1aef50561bc486b0" style="width: 100.0%; height: 100.0%;">Gate 2 Chandigarh University</div>`)[0];
-                popup_44b078ac186e1731c0943c72001a53ae.setContent(html_cf25cb19b84c63bd1aef50561bc486b0);
-            
-        
-
-        marker_53a5e10da611c5321bbdde27622214a7.bindPopup(popup_44b078ac186e1731c0943c72001a53ae)
-        ;
-
+            marker_a3fb2c09782413d9fd10948e460f5dde.bindTooltip(
+                `<div>
+                     Gate 2 Chandigarh University
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_c842d22ff9e59f76eb27e4d81ac63f9f = L.marker(
+            var marker_5f231550d9e404e06081cbbee049df00 = L.marker(
                 [30.77058097, 76.57690408],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_2f18ab0c6fb50c57ec308775f88e124e = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_3251aebff2ae357149c1be571266402a = $(`<div id="html_3251aebff2ae357149c1be571266402a" style="width: 100.0%; height: 100.0%;">Dispensary</div>`)[0];
-                popup_2f18ab0c6fb50c57ec308775f88e124e.setContent(html_3251aebff2ae357149c1be571266402a);
-            
-        
-
-        marker_c842d22ff9e59f76eb27e4d81ac63f9f.bindPopup(popup_2f18ab0c6fb50c57ec308775f88e124e)
-        ;
-
+            marker_5f231550d9e404e06081cbbee049df00.bindTooltip(
+                `<div>
+                     Dispensary
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_5d6e3a3372980d39f9da75cec25acc1f = L.marker(
+            var marker_0cef0138ee908d717641555a3f39a243 = L.marker(
                 [30.76711667, 76.57631484],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_cf6ba2b2efe9423f64e8a2a23d2bb5bc = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_a68781728ae6d421d2a21d11d9af6aa7 = $(`<div id="html_a68781728ae6d421d2a21d11d9af6aa7" style="width: 100.0%; height: 100.0%;">University Institute of Engineering (Block-6 CU)</div>`)[0];
-                popup_cf6ba2b2efe9423f64e8a2a23d2bb5bc.setContent(html_a68781728ae6d421d2a21d11d9af6aa7);
-            
-        
-
-        marker_5d6e3a3372980d39f9da75cec25acc1f.bindPopup(popup_cf6ba2b2efe9423f64e8a2a23d2bb5bc)
-        ;
-
+            marker_0cef0138ee908d717641555a3f39a243.bindTooltip(
+                `<div>
+                     University Institute of Engineering (Block-6 CU)
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            var marker_3a20b275427a6c7a9d81b8b27dd65038 = L.marker(
+            var marker_1d7d8213d3152775d2a278224ff03803 = L.marker(
                 [30.76792836, 76.57608262],
                 {}
-            ).addTo(feature_group_547497d75f5a47af936390f8332e7248);
+            ).addTo(marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b);
         
     
-        var popup_55584c2f2ea0660fe33020a6656ea6d6 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_bbb8ac164edb7a502462b63dcfe85002 = $(`<div id="html_bbb8ac164edb7a502462b63dcfe85002" style="width: 100.0%; height: 100.0%;">CU Basketball Court</div>`)[0];
-                popup_55584c2f2ea0660fe33020a6656ea6d6.setContent(html_bbb8ac164edb7a502462b63dcfe85002);
-            
-        
-
-        marker_3a20b275427a6c7a9d81b8b27dd65038.bindPopup(popup_55584c2f2ea0660fe33020a6656ea6d6)
-        ;
-
+            marker_1d7d8213d3152775d2a278224ff03803.bindTooltip(
+                `<div>
+                     CU Basketball Court
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-    
-            feature_group_547497d75f5a47af936390f8332e7248.addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b.addTo(feature_group_5ba94592a3f992a463722407e25ea968);
         
     
-            var layer_control_3c65560db9d321651e77132b62b27059_layers = {
+            feature_group_5ba94592a3f992a463722407e25ea968.addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
+        
+    
+            var layer_control_04eb6f86029ccf703d79e37e68f7e3b2_layers = {
                 base_layers : {
-                    "openstreetmapbzh" : tile_layer_448762a156d8eb5aac83a09244794c4d,
+                    "openstreetmapfrance" : tile_layer_433cf5096312314b7307ee6cb2318dc4,
                 },
                 overlays :  {
-                    "Food_courts" : feature_group_3f71109d2786c607969e47a50aae84a1,
-                    "Blocks" : feature_group_547497d75f5a47af936390f8332e7248,
+                    "Food Courts" : feature_group_78f73d5ec3f611b283ab454528c830d5,
+                    "Blocks" : feature_group_5ba94592a3f992a463722407e25ea968,
                 },
             };
-            let layer_control_3c65560db9d321651e77132b62b27059 = L.control.layers(
-                layer_control_3c65560db9d321651e77132b62b27059_layers.base_layers,
-                layer_control_3c65560db9d321651e77132b62b27059_layers.overlays,
+            let layer_control_04eb6f86029ccf703d79e37e68f7e3b2 = L.control.layers(
+                layer_control_04eb6f86029ccf703d79e37e68f7e3b2_layers.base_layers,
+                layer_control_04eb6f86029ccf703d79e37e68f7e3b2_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            ).addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
 
         
     
-            tile_layer_448762a156d8eb5aac83a09244794c4d.addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            tile_layer_433cf5096312314b7307ee6cb2318dc4.addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
         
     
-            feature_group_3f71109d2786c607969e47a50aae84a1.addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            marker_cluster_f92982c675ae9f84ed9967f66aec2b96.addTo(feature_group_78f73d5ec3f611b283ab454528c830d5);
         
     
-            feature_group_547497d75f5a47af936390f8332e7248.addTo(map_24040dbf86e0a7b4f7a40a8d08735df6);
+            feature_group_78f73d5ec3f611b283ab454528c830d5.addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
+        
+    
+            marker_cluster_f9a75c7471b0bda90efdf722d42c6e5b.addTo(feature_group_5ba94592a3f992a463722407e25ea968);
+        
+    
+            feature_group_5ba94592a3f992a463722407e25ea968.addTo(map_f6b20c1b9ce248d6693bc108bf378a7a);
         
 </script>
 </html>

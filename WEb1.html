@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InteractiveAtlas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: darkgrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        scroll-behavior: smooth;
+      }
+
+      h1 {
+        color: #ff7373;
+        text-align: center;
+      }
+
+      #map {
+        width: 100%;
+        height: 600px;
+        border: 1px solid #800000;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .github-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        background-color: #333333;
+        border-radius: 50%;
+       padding: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .github-icon:hover {
+        background-color: #444;
+      }
+
+      .about-button {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #ffc3a0;
+        color: #333333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      #about {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        display: none;
+        overflow: auto;
+      }
+
+      #about::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: -1;
+      }
+
+      #map {
+        position: relative;
+      }
+
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: 5px solid #fff;
+        border-top-color: #ff7373;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="logi.jpg" alt="InteractiveAtlas" class="icon">
+      <a href="https://github.com/AbhinavDeokuliar/InteractiveMaps" target="_blank">
+        <img src="https://github.com/fluidicon.png" alt="GitHub" class="github-icon">
+      </a>
+      <a href="#about" class="about-button">About</a>
+      <h1>InteractiveAtlas</h1>
+    </div>
+    <div id="map"></div>
+    <script>
+      var mapFrame = document.createElement("iframe");
+      mapFrame.src = "draft2.html";
+      mapFrame.width = "100%";
+      mapFrame.height = "600px";
+      mapFrame.frameBorder = "0";
+      document.getElementById("map").appendChild(mapFrame);
+
+      var loading = document.createElement('div');
+      loading.className = 'loading';
+      document.getElementById('map').appendChild(loading);
+
+      mapFrame.onload = function() {
+        document.getElementById('map').removeChild(loading);
+      };
+
+      document.querySelector('.about-button').addEventListener('click', function() {
+        document.getElementById('about').style.display = 'block';
+        document.querySelector('html').scrollTop = document.body.scrollHeight;
+      });
+
+      document.getElementById('about').addEventListener('click', function(event) {
+        if (event.target === this) {
+          this.style.display = 'none';
+        }
+      });
+    </script>
+    <div id="about" style="display:none;">
+      <h2>About InteractiveAtlas</h2>
+      <p>InteractiveAtlas is a project that aims to create dynamic maps using Python. It provides an engaging tool for students to explore various locations, zoom in, zoom out, and interact with geographical data effortlessly. The project is developed by Chandigarh University and is available on GitHub.</p>
+</div>
+  </body>
+</html>
